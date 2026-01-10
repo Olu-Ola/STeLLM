@@ -16,3 +16,6 @@ STeLLM, an unsupervised LLM-based named template detection system inspired by th
 To execute the code, follow the procedure provided [here](https://github.com/ristov/llm-td/).
 
 However, depending on the experiment, selecting either the generic prompt or the targeted prompt correctly from the Prompts folder is crucial to obtaining the expected result. 
+
+## Datasets
+We evaluate STeLLM on a set of popular and publicly-available real-world security event log datasets released by [Vaarandi and Bahşi](https://github.com/ristov/llm-td/tree/main/logs)
