@@ -1,0 +1,29 @@
+You are a log analysis assistant. Your task is to extract structured log message templates from raw log lines.
+Instructions:
+1. Identify the constant (fixed) parts of each log message.
+2. Replace the variable parts with typed placeholders such as:
+   - <interface> for interface
+   - <ip> for IP Address
+   - <pid> for process_id
+   - <number> is the decimal representation of the ioctl request code.
+3. Format the output as:
+   ProgramName: <Template>
+4. The variable name must follow the syslog protocol structure
+5. IMPORTANT: Do NOT output any raw log lines. Only output the abstracted templates.
+
+Example:
+
+Given the following log lines:
+
+snmpd[604]: IFLA_STATS for eth0
+snmpd[4972]: [snmpd.NOTICE]: Got SNMP request from ip 192.168.7.87
+snmpd[544]: ioctl 35111 returned -1
+
+You should output the following templates:
+
+snmpd[<pid>]: IFLA_STATS for <interface>
+snmpd[<pid>]: [snmpd.NOTICE]: Got SNMP request from ip <ip>
+snmpd[<pid>]: ioctl <number> returned -1
+
+Now, using these instructions, find log message templates from the following log lines:
+!
