@@ -1,0 +1,7 @@
+1.	apache2: PHP Notice: Constant <constant> already defined in <script> on line <line>
+2.	apache2: PHP Notice: Undefined offset: <offset> in <script> on line <line>
+3.	apache2: PHP Notice: Undefined variable: <variable> in <script> on line <line>
+4.	apache2: PHP Notice: Undefined index: <index> in <script> on line <line>
+5.	apache2: PHP Warning: Invalid argument supplied for <parameter> in <script> on line <line>
+6.	apache2: PHP Warning: <parameter1>: stat failed for <parameter2> in <script> on line <line>
+7.	apache2: PHP Warning: <parameter> expects exactly <num1> parameters, <num2> given in <script> on line <line>

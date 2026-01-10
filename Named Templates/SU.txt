@@ -1,0 +1,13 @@
+1.	su[<pid>]: pam_unix(su:session): session opened for user <target_user> by <actor_user>(uid=<uid>)
+2.	su[<pid>]: pam_unix(su:session): session opened for user <target_user> by (uid=<uid>)
+3.	su[<pid>]: pam_unix(su-l:session): session opened for user < target_user > by < actor_user >(uid=<uid>)
+4.	su[<pid>]: pam_unix(su:session): session closed for user <user>
+5.	su[<pid>]: pam_unix(su-l:session): session closed for user <user>
+6.	su[<pid>]: Successful su for <target_user> by <actor_user>
+7.	su[<pid>]: + <terminal> <actor_user>:<target_user>
+8.	su[<pid>]: FAILED su for <target_user> by <actor_user>
+9.	su[<pid >]: - <terminal> <actor_user>:<target_user>
+10.	su[<pid >]: (to <target_user>) <actor_user> on <terminal>
+11.	su[<pid >]: pam_systemd(su:session): Cannot create session: Already running in a session
+12.	su[<pid>]: pam_authenticate: Authentication failure
+13.	su[<pid>]: pam_unix(su:auth): auth could not identify password for [<user>]

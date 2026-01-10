@@ -1,0 +1,7 @@
+1. snmpd[<pid>]: IFLA_STATS for <interface>
+2. snmpd[<pid>]: [snmpd.NOTICE]: Got SNMP request from ip <ip>
+3. snmpd[<pid>]: ioctl <number> returned -1
+4. snmpd[<pid>]: [snmpd.ERR]: send response: Too long
+5. snmpd[<pid>]: [snmpd.ERR]: -- <mib>
+6. snmpd[<pid>]: NET-SNMP version <version>
+7. snmpd[<pid>]: error on subcontainer '<container>' insert (-1)

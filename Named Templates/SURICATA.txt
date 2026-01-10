@@ -1,0 +1,6 @@
+1.	suricata[<pid>]: [<signature_id>] <alert_text> [Classification: <classification>] [Priority: <priority>] {<proto >} <source> -> <destination>
+2.	suricata[<pid>]: [<pid>] <Notice> -- rule reload complete
+3.	suricata[<pid>]: [<pid>] <Notice> -- rule reload starting
+4.	suricata[<pid:number>]: [<pid>] <Warning> -- [ERRCODE: SC_ERR_EVENT_ENGINE(<201>)] - can't suppress sid <ruleid>, gid 1: unknown rule
+5.	suricata[<pid:number>]: [<pid>] <Notice> -- Flow emergency mode entered...
+6.	suricata[<pid:number>]: [<pid>] <Notice> -- Flow emergency mode over, back to normal... unsetting FLOW_EMERGENCY bit (ts.tv_sec: <*>, ts.tv_usec:<*>) flow_spare_q status(): <queue_percent>% flows at the queue

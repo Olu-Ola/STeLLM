@@ -1,0 +1,36 @@
+1.	sshd[<pid>]: Accepted <auth_method> for <user> from <host> port <port> ssh2
+2.	sshd[<pid>]: Accepted <auth_method> for <user> from <host> port <port> ssh2: <data>
+3.	sshd[<pid>]: Failed < auth_method > for <user> from < host > port <port> ssh2
+4.	sshd[<pid>]: Failed <auth_method> for <user> from <host> port <port> ssh2: <data>
+5.	sshd[<pid>]: Failed <auth_method> for invalid user <user> from <host> port <port> ssh2
+6.	sshd[<pid>]: Invalid user <user> from <host>
+7.	sshd[<pid>]: Invalid user <user> from <host> port <port>
+8.	sshd[<pid>]: input_userauth_request: invalid user <data>
+9.	sshd[<pid>]: User <user> from <host> not allowed because none of user's groups are listed in AllowGroups
+10.	sshd[<pid>]: Received disconnect from <host> port <port>:<message>
+11.	sshd[<pid>]: Received disconnect from <host>:<message>
+12.	sshd[<pid>]: Disconnected from <host> port <port>
+13.	sshd[<pid>]: Disconnected from user <user> <host> port <port>
+14.	sshd[<pid>]: Disconnected from <host> port <port> <data>
+15.	sshd[<pid>]: Disconnected from authenticating user <user> <host> port <port> <data>
+16.	sshd[<pid>]: Connection closed by <host> <data>
+17.	sshd[<pid>]: Connection closed by <host> port <port> <data>
+18.	sshd[<pid>]: Connection closed by authenticating user <user> <host> port <port> <data>
+19.	sshd[<pid>]: Connection reset by authenticating user <user> <host> port <port> <data>
+20.	sshd[<pid>]: pam_unix(sshd:session): session opened for user <user> by (uid=<uid>)
+21.	sshd[<pid>]: pam_unix(sshd:session): session closed for user <user>
+22.	sshd[<pid>]: pam_unix(sshd:auth): authentication failure; logname= uid=<uid> euid=<euid> tty=ssh ruser= rhost=<host> user=<user>
+23.	sshd[<pid>]: PAM 1 more authentication failure; logname= uid=<uid> euid=<euid> tty=ssh ruser= rhost=<host> user=<user>
+24.	sshd[<pid>]: PAM <number> more authentication failures; logname= uid=<uid> euid=<euid> tty=ssh ruser= rhost=<host> user=<user>
+25.	sshd[<pid>]: pam_systemd(sshd:session): Failed to release session: <message>
+26.	sshd[<pid>]: rexec line <line>: Deprecated option <deprecated_option>
+27.	sshd[<pid>]: reprocess config line <line>: Deprecated option <deprecated_option>
+28.	sshd[<pid>]: /etc/ssh/sshd_config line < line >: Deprecated option < deprecated_option >
+29.	sshd[<pid>]: Server listening on <interface> port <port>.
+30.	sshd[<pid>]: Did not receive identification string from <host>
+31.	sshd[<pid>]: Bad protocol version identification '<protocol>' from <host>
+32.	sshd[<pid>]: Protocol major versions differ for <host>: <protocol1> vs. <protocol2>
+33.	sshd[<pid>]: Address <ip> maps to <host>, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!
+34.	sshd[<pid>]: error: <message>
+35.	sshd[<pid>]: dispatch_protocol_error: type <type> seq <seq>
+36.	sshd[<pid>]: fatal: <message>
