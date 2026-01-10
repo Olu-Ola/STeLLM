@@ -1,0 +1,26 @@
+Unprocessed lines:
+
+2024-04-08T20:47:08+03:00 mysensor suricata[1701965]: [1702042] <Notice> -- Flow emergency mode entered...
+2024-04-08T20:47:18+03:00 mysensor suricata[1701965]: [1702042] <Notice> -- Flow emergency mode over, back to normal... unsetting FLOW_EMERGENCY bit (ts.tv_sec: 1712598435, ts.tv_usec:781169) flow_spare_q status(): 433% flows at the queue
+
+Total number of unprocessed lines: 2
+
+Detected patterns:
+
+suricata[<number>]: [<number>:<number>:<number>] <string> <ipaddress>:<number> -> <ipaddress>:<number> OG
+(?^:suricata\[.+?\]\:\s+\[.+?\:.+?\:.+?\]\s+.+?\s+.+?\:.+?\s+\-\>\s+.+?\:.+?\s*$)
+999510 matches
+
+suricata[<number>]: [<number>] <Notice> -- rule reload starting 1
+(?^:suricata\[.+?\]\:\s+\[.+?\]\s+.+?\s+\-\-\s+rule\s+reload\s+starting\s*$)
+10 matches
+
+suricata[<number>]: [<number>] <Warning> -- [ERRCODE: SC_ERR_EVENT_ENGINE(210)] - can't suppress sid <number>, gid 1: unknown rule 2
+(?^:suricata\[.+?\]\:\s+\[.+?\]\s+.+?\s+\-\-\s+\[ERRCODE\:\s+SC_ERR_EVENT_ENGINE\(210\)\]\s+\-\s+can\'t\s+suppress\s+sid\s+.+?\,\s+gid\s+1\:\s+unknown\s+rule\s*$)
+90 matches
+
+suricata[<number>]: [<number>] <string> -- rule reload complete - No <string> should be <Notice> and not a variable
+(?^:suricata\[.+?\]\:\s+\[.+?\]\s+.+?\s+\-\-\s+rule\s+reload\s+complete\s*$)
+10 matches
+
+Total number of detected patterns: 4

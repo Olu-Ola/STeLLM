@@ -1,0 +1,147 @@
+This note was added manully on the 5th of January, 2026. The correct templates are tagged "Yes" at the beginning of each templates
+UG means under-generalized templates, while OG means over-generalized templates
+
+Unprocessed lines:
+
+May 31 09:58:20 192.168.3.206 sshd[17830]: error: Received disconnect from 192.168.2.72: 0:  [preauth]
+May 31 13:25:27 192.168.3.206 sshd[20647]: error: Received disconnect from 192.168.3.67: 0: 
+Jun  1 12:52:34 192.168.0.171 sshd[19269]: error: Received disconnect from 192.168.2.39: 0: 
+Jun  1 12:52:36 192.168.3.206 sshd[17037]: error: Received disconnect from 192.168.2.39: 0: 
+
+Total number of unprocessed lines: 4
+
+Detected patterns:
+
+Yes - sshd[<number>]: /etc/ssh/sshd_config line <number>: Deprecated option <string>
+(?^:sshd\[.+?\]\:\s+\/etc\/ssh\/sshd_config\s+line\s+.+?\:\s+Deprecated\s+option\s+.+?\s*$)
+48 matches
+
+sshd[<number>]: Accepted password for <username> from <ipaddress> port <number> ssh2 - UG
+(?^:sshd\[.+?\]\:\s+Accepted\s+password\s+for\s+.+?\s+from\s+.+?\s+port\s+.+?\s+ssh2\s*$)
+10040 matches
+
+sshd[<number>]: Accepted publickey for <username> from <ipaddress> port <number> ssh2 - UG
+(?^:sshd\[.+?\]\:\s+Accepted\s+publickey\s+for\s+.+?\s+from\s+.+?\s+port\s+.+?\s+ssh2\s*$)
+35 matches
+
+Yes - sshd[<number>]: Accepted publickey for <username> from <ipaddress> port <number> ssh2: <string>
+(?^:sshd\[.+?\]\:\s+Accepted\s+publickey\s+for\s+.+?\s+from\s+.+?\s+port\s+.+?\s+ssh2\:\s+.+?\s*$)
+103193 matches
+
+Yes - sshd[<number>]: Address <ipaddress> maps to <hostname>, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!
+(?^:sshd\[.+?\]\:\s+Address\s+.+?\s+maps\s+to\s+.+?\,\s+but\s+this\s+does\s+not\s+map\s+back\s+to\s+the\s+address\s+\-\s+POSSIBLE\s+BREAK\-IN\s+ATTEMPT\!\s*$)
+2 matches
+
+Yes - sshd[<number>]: Bad protocol version identification '<string>' from <ipaddress>
+(?^:sshd\[.+?\]\:\s+Bad\s+protocol\s+version\s+identification\s+\'.+?\'\s+from\s+.+?\s*$)
+70 matches
+
+Yes - sshd[<number>]: Connection closed by <ipaddress> [preauth]
+(?^:sshd\[.+?\]\:\s+Connection\s+closed\s+by\s+.+?\s+\[preauth\]\s*$)
+10147 matches
+
+Yes - sshd[<number>]: Connection reset by authenticating user <username> <ipaddress> port <number> [preauth]
+(?^:sshd\[.+?\]\:\s+Connection\s+reset\s+by\s+authenticating\s+user\s+.+?\s+.+?\s+port\s+.+?\s+\[preauth\]\s*$)
+4 matches
+
+Yes - sshd[<number>]: Did not receive identification string from <ipaddress>
+(?^:sshd\[.+?\]\:\s+Did\s+not\s+receive\s+identification\s+string\s+from\s+.+?\s*$)
+52 matches
+
+Yes - sshd[<number>]: Failed none for invalid user <username> from <ipaddress> port <number> ssh2
+(?^:sshd\[.+?\]\:\s+Failed\s+none\s+for\s+invalid\s+user\s+.+?\s+from\s+.+?\s+port\s+.+?\s+ssh2\s*$)
+2 matches
+
+Yes - sshd[<number>]: Failed password for <username> from <ipaddress> port <number> ssh2
+(?^:sshd\[.+?\]\:\s+Failed\s+password\s+for\s+.+?\s+from\s+.+?\s+port\s+.+?\s+ssh2\s*$)
+54 matches
+
+Yes - sshd[<number>]: Failed password for <username> from <ipaddress> port <number> ssh2: <string>
+(?^:sshd\[.+?\]\:\s+Failed\s+password\s+for\s+.+?\s+from\s+.+?\s+port\s+.+?\s+ssh2\:\s+.+?\s*$)
+1 matches
+
+Yes - sshd[<number>]: Invalid user <username> from <ipaddress>
+(?^:sshd\[.+?\]\:\s+Invalid\s+user\s+.+?\s+from\s+.+?\s*$)
+5 matches
+
+No - sshd[<number>]: PAM <number> more authentication failure; logname= uid=<number> euid=<number> tty=ssh ruser= rhost=<ipaddress> user=<username>
+(?^:sshd\[.+?\]\:\s+PAM\s+.+?\s+more\s+authentication\s+failure\;\s+logname\=\s+uid\=.+?\s+euid\=.+?\s+tty\=ssh\s+ruser\=\s+rhost\=.+?\s+user\=.+?\s*$)
+1 matches
+
+Yes - sshd[<number>]: PAM <number> more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=<ipaddress>  user=<username>
+(?^:sshd\[.+?\]\:\s+PAM\s+.+?\s+more\s+authentication\s+failures\;\s+logname\=\s+uid\=0\s+euid\=0\s+tty\=ssh\s+ruser\=\s+rhost\=.+?\s+user\=.+?\s*$)
+3 matches
+
+Yes - sshd[<number>]: Protocol major versions differ for <ipaddress>: SSH-<version1> vs. SSH-<version2>
+(?^:sshd\[.+?\]\:\s+Protocol\s+major\s+versions\s+differ\s+for\s+.+?\:\s+SSH\-.+?\s+vs\.\s+SSH\-.+?\s*$)
+15 matches
+
+Yes - sshd[<number>]: Received disconnect from <ipaddress> port <number>:<number>
+(?^:sshd\[.+?\]\:\s+Received\s+disconnect\s+from\s+.+?\s+port\s+.+?\:.+?\s*$)
+111031 matches
+
+Yes - sshd[<number>]: Received disconnect from <ipaddress>:<number>: <string>
+(?^:sshd\[.+?\]\:\s+Received\s+disconnect\s+from\s+.+?\:.+?\:\s+.+?\s*$)
+111168 matches
+
+Yes - sshd[<number>]: Server listening on <ipaddress> port <number>
+(?^:sshd\[.+?\]\:\s+Server\s+listening\s+on\s+.+?\s+port\s+.+?\s*$)
+12 matches
+
+Yes - sshd[<number>]: User <username> from <hostname> not allowed because none of user's groups are listed in AllowGroups
+(?^:sshd\[.+?\]\:\s+User\s+.+?\s+from\s+.+?\s+not\s+allowed\s+because\s+none\s+of\s+user\'s\s+groups\s+are\s+listed\s+in\s+AllowGroups\s*$)
+5 matches
+
+Yes - sshd[<number>]: dispatch_protocol_error: type <number> seq <number>
+(?^:sshd\[.+?\]\:\s+dispatch_protocol_error\:\s+type\s+.+?\s+seq\s+.+?\s*$)
+10 matches
+
+No - sshd[<number>]: error: Received disconnect from <ipaddress> port <number>:<number>
+(?^:sshd\[.+?\]\:\s+error\:\s+Received\s+disconnect\s+from\s+.+?\s+port\s+.+?\:.+?\s*$)
+35 matches
+
+sshd[<number>]: fatal: Read from socket failed: Connection reset by peer - UG
+(?^:sshd\[.+?\]\:\s+fatal\:\s+Read\s+from\s+socket\s+failed\:\s+Connection\s+reset\s+by\s+peer\s*$)
+28 matches
+
+sshd[<number>]: fatal: Read from socket failed: Connection reset by peer [preauth] - UG
+(?^:sshd\[.+?\]\:\s+fatal\:\s+Read\s+from\s+socket\s+failed\:\s+Connection\s+reset\s+by\s+peer\s+\[preauth\]\s*$)
+3 matches
+
+sshd[<number>]: fatal: Write failed: Connection reset by peer - UG
+(?^:sshd\[.+?\]\:\s+fatal\:\s+Write\s+failed\:\s+Connection\s+reset\s+by\s+peer\s*$)
+12 matches
+
+Yes - sshd[<number>]: input_userauth_request: invalid user <username>
+(?^:sshd\[.+?\]\:\s+input_userauth_request\:\s+invalid\s+user\s+.+?\s*$)
+10 matches
+
+Yes - sshd[<number>]: pam_systemd(sshd:session): Failed to release session: Interrupted system call
+(?^:sshd\[.+?\]\:\s+pam_systemd\(sshd\:session\)\:\s+Failed\s+to\s+release\s+session\:\s+Interrupted\s+system\s+call\s*$)
+1 matches
+
+Yes - sshd[<number>]: pam_unix(sshd:auth): authentication failure; logname= uid=<number> euid=0 tty=ssh ruser= rhost=<ipaddress> user=<username>
+(?^:sshd\[.+?\]\:\s+pam_unix\(sshd\:auth\)\:\s+authentication\s+failure\;\s+logname\=\s+uid\=.+?\s+euid\=0\s+tty\=ssh\s+ruser\=\s+rhost\=.+?\s+user\=.+?\s*$)
+44 matches
+
+Yes - sshd[<number>]: pam_unix(sshd:session): session closed for user <username>
+(?^:sshd\[.+?\]\:\s+pam_unix\(sshd\:session\)\:\s+session\s+closed\s+for\s+user\s+.+?\s*$)
+113234 matches
+
+Yes sshd[<number>]: pam_unix(sshd:session): session opened for user <username> by (uid=<number>)
+(?^:sshd\[.+?\]\:\s+pam_unix\(sshd\:session\)\:\s+session\s+opened\s+for\s+user\s+.+?\s+by\s+\(uid\=.+?\)\s*$)
+113268 matches
+
+Yes - sshd[<number>]: reprocess config line <number>: Deprecated option <string>
+(?^:sshd\[.+?\]\:\s+reprocess\s+config\s+line\s+.+?\:\s+Deprecated\s+option\s+.+?\s*$)
+20034 matches
+
+Yes - sshd[<number>]: rexec line <number>: Deprecated option <string>
+(?^:sshd\[.+?\]\:\s+rexec\s+line\s+.+?\:\s+Deprecated\s+option\s+.+?\s*$)
+40068 matches
+
+Yes - sshd[<number]>: Disconnected from <ipaddress> port <number>
+(?^:sshd\[.+?\:\s+Disconnected\s+from\s+.+?\s+port\s+.+?\s*$)
+111066 matches
+
+Total number of detected patterns: 33

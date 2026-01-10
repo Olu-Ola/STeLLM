@@ -1,0 +1,18 @@
+Unprocessed lines:
+
+2024-04-09T21:05:59+03:00 mysensor
+
+Total number of unprocessed lines: 1
+
+Detected patterns:
+
+suricata[<pid>]: [<pid>] <Notice> -- rule reload starting
+(?^:suricata\[.+?\]\:\s+\[.+?\]\s+.+?\s+\-\-\s+rule\s+reload\s+starting\s*$)
+10 matches
+All lines matching this pattern are covered by other patterns
+
+suricata[<pid>]: [<signature_id>] <alert_text> OG
+(?^:suricata\[.+?\]\:\s+\[.+?\]\s+.+?\s*$)
+999621 matches
+
+Total number of detected patterns: 2

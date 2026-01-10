@@ -1,0 +1,62 @@
+Unprocessed lines:
+
+Jun 21 11:33:45 192.168.0.111 su[18733]: pam_unix(su:auth): auth could not identify password for [mysql]
+Jun 21 11:33:45 192.168.0.111 su[18733]: pam_authenticate: Authentication failure
+Jun 21 11:33:45 192.168.0.111 su[18733]: FAILED su for mysql by alice
+Jun 21 11:33:45 192.168.0.111 su[18733]: - /dev/pts/0 alice:mysql
+Jun 21 11:33:53 192.168.0.111 su[18750]: pam_unix(su:auth): auth could not identify password for [mysql]
+Jun 21 11:33:53 192.168.0.111 su[18750]: pam_authenticate: Authentication failure
+Jun 21 11:33:53 192.168.0.111 su[18750]: FAILED su for mysql by alice
+Jun 21 11:33:53 192.168.0.111 su[18750]: - /dev/pts/0 alice:mysql
+
+Total number of unprocessed lines: 8
+
+Detected patterns:
+
+su[<pid>]: (to <target_user>) <actor_user> on <tty> - 1, 1
+(?^:su\[.+?\]\:\s+\(to\s+.+?\)\s+.+?\s+on\s+.+?\s*$)
+79 matches
+
+su[<pid>]: (to root) <actor_user> on <tty> - Already covered up
+(?^:su\[.+?\]\:\s+\(to\s+root\)\s+.+?\s+on\s+.+?\s*$)
+59 matches
+All lines matching this pattern are covered by other patterns
+
+su[<pid>]: + <path> <user>:<target_user> 2, <path> to generic for 3rd experiment.
+(?^:su\[.+?\]\:\s+\+\s+.+?\s+.+?\:.+?\s*$)
+511 matches
+
+su[<pid>]: Successful su for <target_user> by <actor_user> - 3, 2
+(?^:su\[.+?\]\:\s+Successful\s+su\s+for\s+.+?\s+by\s+.+?\s*$)
+511 matches
+
+su[<pid>]: pam_systemd(su:session): Cannot create session: Already running in a session - 4, 3
+(?^:su\[.+?\]\:\s+pam_systemd\(su\:session\)\:\s+Cannot\s+create\s+session\:\s+Already\s+running\s+in\s+a\s+session\s*$)
+67 matches
+
+su[<pid>]: pam_unix(su-l:session): session closed for user <target_user> 5, 4
+(?^:su\[.+?\]\:\s+pam_unix\(su\-l\:session\)\:\s+session\s+closed\s+for\s+user\s+.+?\s*$)
+80 matches
+
+su[<pid>]: pam_unix(su-l:session): session closed for user root - Already covered in another template
+(?^:su\[.+?\]\:\s+pam_unix\(su\-l\:session\)\:\s+session\s+closed\s+for\s+user\s+root\s*$)
+60 matches
+All lines matching this pattern are covered by other patterns
+
+su[<pid>]: pam_unix(su-l:session): session opened for user <target_user> by <actor_user>(uid=<uid>) 6, 5
+(?^:su\[.+?\]\:\s+pam_unix\(su\-l\:session\)\:\s+session\s+opened\s+for\s+user\s+.+?\s+by\s+.+?\(uid\=.+?\)\s*$)
+79 matches
+
+su[<pid>]: pam_unix(su:session): session closed for user <target_user> 7, 6
+(?^:su\[.+?\]\:\s+pam_unix\(su\:session\)\:\s+session\s+closed\s+for\s+user\s+.+?\s*$)
+508 matches
+
+su[<pid>]: pam_unix(su:session): session opened for user <target_user> by <actor_user>(uid=<uid>) - 8, 7
+(?^:su\[.+?\]\:\s+pam_unix\(su\:session\)\:\s+session\s+opened\s+for\s+user\s+.+?\s+by\s+.+?\(uid\=.+?\)\s*$)
+91 matches
+
+su[<pid>]: pam_unix(su:session): session opened for user nobody by (uid=<uid>) - UG
+(?^:su\[.+?\]\:\s+pam_unix\(su\:session\)\:\s+session\s+opened\s+for\s+user\s+nobody\s+by\s+\(uid\=.+?\)\s*$)
+420 matches
+
+Total number of detected patterns: 11

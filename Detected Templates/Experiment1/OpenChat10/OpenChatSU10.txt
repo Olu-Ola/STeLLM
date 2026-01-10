@@ -1,0 +1,60 @@
+Unprocessed lines:
+
+
+Total number of unprocessed lines: 0
+
+Detected patterns:
+
+su[<number>]: (to <string>) <username> on pts/<number> 10
+(?^:su\[.+?\]\:\s+\(to\s+.+?\)\s+.+?\s+on\s+pts\/.+?\s*$)
+79 matches
+
+su[<number>]: + <*> <*>:<*> 7
+(?^:su\[.+?\]\:\s+\+\s+.+?\s+.+?\:.+?\s*$)
+511 matches
+
+su[<number>]: - <string> <username>:<string> 9
+(?^:su\[.+?\]\:\s+\-\s+.+?\s+.+?\:.+?\s*$)
+2 matches
+
+su[<number>]: FAILED su for <username> by <username> 8
+(?^:su\[.+?\]\:\s+FAILED\s+su\s+for\s+.+?\s+by\s+.+?\s*$)
+2 matches
+
+su[<number>]: Successful su for <username> by <username> 6
+(?^:su\[.+?\]\:\s+Successful\s+su\s+for\s+.+?\s+by\s+.+?\s*$)
+511 matches
+
+su[<number>]: pam_authenticate: Authentication failure 12
+(?^:su\[.+?\]\:\s+pam_authenticate\:\s+Authentication\s+failure\s*$)
+2 matches
+
+su[<number>]: pam_systemd(su:session): Cannot create session: Already running in a session 11
+(?^:su\[.+?\]\:\s+pam_systemd\(su\:session\)\:\s+Cannot\s+create\s+session\:\s+Already\s+running\s+in\s+a\s+session\s*$)
+67 matches
+
+su[<number>]: pam_unix(su-l:session): session closed for user <username> 5
+(?^:su\[.+?\]\:\s+pam_unix\(su\-l\:session\)\:\s+session\s+closed\s+for\s+user\s+.+?\s*$)
+80 matches
+
+su[<number>]: pam_unix(su-l:session): session opened for user <username> by <username>(uid=<number>) 3
+(?^:su\[.+?\]\:\s+pam_unix\(su\-l\:session\)\:\s+session\s+opened\s+for\s+user\s+.+?\s+by\s+.+?\(uid\=.+?\)\s*$)
+79 matches
+
+su[<number>]: pam_unix(su:auth): auth could not identify password for [<string>] 13
+(?^:su\[.+?\]\:\s+pam_unix\(su\:auth\)\:\s+auth\s+could\s+not\s+identify\s+password\s+for\s+\[.+?\]\s*$)
+2 matches
+
+su[<number>]: pam_unix(su:session): session closed for user <username> 4
+(?^:su\[.+?\]\:\s+pam_unix\(su\:session\)\:\s+session\s+closed\s+for\s+user\s+.+?\s*$)
+508 matches
+
+su[<number>]: pam_unix(su:session): session opened for user <username> by (uid=<number>) 2
+(?^:su\[.+?\]\:\s+pam_unix\(su\:session\)\:\s+session\s+opened\s+for\s+user\s+.+?\s+by\s+\(uid\=.+?\)\s*$)
+420 matches
+
+su[<number>]: pam_unix(su:session): session opened for user <username> by <username>(uid=<number>) 1
+(?^:su\[.+?\]\:\s+pam_unix\(su\:session\)\:\s+session\s+opened\s+for\s+user\s+.+?\s+by\s+.+?\(uid\=.+?\)\s*$)
+91 matches
+
+Total number of detected patterns: 13

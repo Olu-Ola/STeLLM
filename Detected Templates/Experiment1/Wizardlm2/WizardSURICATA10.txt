@@ -1,0 +1,39 @@
+Unprocessed lines:
+
+2024-04-08T20:47:18+03:00 mysensor suricata[1701965]: [1702042] <Notice> -- Flow emergency mode over, back to normal... unsetting FLOW_EMERGENCY bit (ts.tv_sec: 1712598435, ts.tv_usec:781169) flow_spare_q status(): 433% flows at the queue
+
+Total number of unprocessed lines: 1
+
+Detected patterns:
+
+suricata[<number>]: [1:<number>:<number>] <string> [Classification: <string>] [Priority: <number>] {TCP} <ipaddress> <-> <ipaddress>:<port> - UG
+(?^:suricata\[.+?\]\:\s+\[1\:.+?\:.+?\]\s+.+?\s+\[Classification\:\s+.+?\]\s+\[Priority\:\s+.+?\]\s+\{TCP\}\s+.+?\s+.+?\s+.+?\:.+?\s*$)
+42932 matches
+
+suricata[<number>]: [1:<number>:<number>] <string> [Classification: <string>] [Priority: <number>] {UDP} <ipaddress>:<number> -> <ipaddress>:<number> - UG
+(?^:suricata\[.+?\]\:\s+\[1\:.+?\:.+?\]\s+.+?\s+\[Classification\:\s+.+?\]\s+\[Priority\:\s+.+?\]\s+\{UDP\}\s+.+?\:.+?\s+\-\>\s+.+?\:.+?\s*$)
+956578 matches
+All lines matching this pattern are covered by other patterns
+
+suricata[<number>]: [1:<number>:<number>] <string> {UDP} <ipaddress>:<number> -> <ipaddress>:<number>
+(?^:suricata\[.+?\]\:\s+\[1\:.+?\:.+?\]\s+.+?\s+\{UDP\}\s+.+?\:.+?\s+\-\>\s+.+?\:.+?\s*$)
+956578 matches
+All lines matching this pattern are covered by other patterns
+
+suricata[<number>]: [<number>] <Notice> -- rule reload starting 2
+(?^:suricata\[.+?\]\:\s+\[.+?\]\s+.+?\s+\-\-\s+rule\s+reload\s+starting\s*$)
+10 matches
+
+suricata[<number>]: [<number>] <Warning> -- [ERRCODE: SC_ERR_EVENT_ENGINE(210)] - can't suppress sid <number>, gid 1: unknown rule 3
+(?^:suricata\[.+?\]\:\s+\[.+?\]\s+.+?\s+\-\-\s+\[ERRCODE\:\s+SC_ERR_EVENT_ENGINE\(210\)\]\s+\-\s+can\'t\s+suppress\s+sid\s+.+?\,\s+gid\s+1\:\s+unknown\s+rule\s*$)
+90 matches
+
+suricata[<number>]: [<timestamp>] <Notice> -- Flow emergency mode entered... 4
+(?^:suricata\[.+?\]\:\s+\[.+?\]\s+.+?\s+\-\-\s+Flow\s+emergency\s+mode\s+entered\.\.\.\s*$)
+1 matches
+
+suricata[<number>]: [<timestamp>] <Notice> -- rule reload complete 1
+(?^:suricata\[.+?\]\:\s+\[.+?\]\s+.+?\s+\-\-\s+rule\s+reload\s+complete\s*$)
+10 matches
+
+Total number of detected patterns: 7

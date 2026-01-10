@@ -1,0 +1,84 @@
+Unprocessed lines:
+
+2024-04-08T20:47:08+03:00 mysensor suricata[1701965]: [1702042] <Notice> -- Flow emergency mode entered...
+2024-04-08T20:47:18+03:00 mysensor suricata[1701965]: [1702042] <Notice> -- Flow emergency mode over, back to normal... unsetting FLOW_EMERGENCY bit (ts.tv_sec: 1712598435, ts.tv_usec:781169) flow_spare_q status(): 433% flows at the queue
+
+Total number of unprocessed lines: 2
+
+Detected patterns:
+
+suricata[<number>]: <Notice> -- rule reload complete 1
+(?^:suricata\[.+?\]\:\s+.+?\s+\-\-\s+rule\s+reload\s+complete\s*$)
+10 matches
+
+suricata[<number>]: [1701965] <Notice> -- rule reload starting - 2 [1701965] the process ID not changing
+(?^:suricata\[.+?\]\:\s+\[1701965\]\s+.+?\s+\-\-\s+rule\s+reload\s+starting\s*$)
+10 matches
+
+suricata[<number>]: [1701965] <Warning> -- [ERRCODE: SC_ERR_EVENT_ENGINE(210)] - can't suppress sid <RuleID>, gid 1: unknown rule - 3
+(?^:suricata\[.+?\]\:\s+\[1701965\]\s+.+?\s+\-\-\s+\[ERRCODE\:\s+SC_ERR_EVENT_ENGINE\(210\)\]\s+\-\s+can\'t\s+suppress\s+sid\s+.+?\,\s+gid\s+1\:\s+unknown\s+rule\s*$)
+90 matches
+
+suricata[<number>]: [1:<number>:<number>] ET <Category> <Description> [Classification: <ClassificationType>] [Priority: <Priority>] {<Protocol}> <SourceIP>:<SourcePort> -> <DestinationIP>:<DestinationPort>
+(?^:suricata\[.+?\]\:\s+\[1\:.+?\:.+?\]\s+ET\s+.+?\s+.+?\s+\[Classification\:\s+.+?\]\s+\[Priority\:\s+.+?\]\s+\{.+?\s+.+?\:.+?\s+\-\>\s+.+?\:.+?\s*$)
+24294 matches
+
+suricata[<number>]: [1:<number>:<number>] ETPRO <string> <DeviceModel> <DeviceName> credential stealing attempt <number> [Classification: Attempted Information Leak] [Priority: <number>] {UDP} <sourceIP>:<sourcePort> -> <destinationIP>:161
+(?^:suricata\[.+?\]\:\s+\[1\:.+?\:.+?\]\s+ETPRO\s+.+?\s+.+?\s+.+?\s+credential\s+stealing\s+attempt\s+.+?\s+\[Classification\:\s+Attempted\s+Information\s+Leak\]\s+\[Priority\:\s+.+?\]\s+\{UDP\}\s+.+?\:.+?\s+\-\>\s+.+?\:161\s*$)
+3552 matches
+
+suricata[<number>]: [1:<number>:<number>] ETPRO <string> Possible <Classification> [Priority: <number>] {<protocol>} <ipaddress_src>:<port_src> -> <ipaddress_dst>:<port_dst>
+(?^:suricata\[.+?\]\:\s+\[1\:.+?\:.+?\]\s+ETPRO\s+.+?\s+Possible\s+.+?\s+\[Priority\:\s+.+?\]\s+\{.+?\}\s+.+?\:.+?\s+\-\>\s+.+?\:.+?\s*$)
+4938 matches
+
+suricata[<number>]: [1:<number>:<number>] ETPRO USER_AGENTS Observed Suspicious UA (<string>) [Classification: Potentially Bad Traffic] [Priority: 2] {TCP} <ipaddress>:<number> -> <ipaddress>:<number>
+(?^:suricata\[.+?\]\:\s+\[1\:.+?\:.+?\]\s+ETPRO\s+USER_AGENTS\s+Observed\s+Suspicious\s+UA\s+\(.+?\)\s+\[Classification\:\s+Potentially\s+Bad\s+Traffic\]\s+\[Priority\:\s+2\]\s+\{TCP\}\s+.+?\:.+?\s+\-\>\s+.+?\:.+?\s*$)
+32089 matches
+
+suricata[<number>]: [1:<number>:<number>] GPL VOIP SIP <number> Unauthorized Flood [Classification: Attempted Denial of Service] [Priority: 2] {UDP} <ipaddress>:<number> -> <ipaddress>:<number>
+(?^:suricata\[.+?\]\:\s+\[1\:.+?\:.+?\]\s+GPL\s+VOIP\s+SIP\s+.+?\s+Unauthorized\s+Flood\s+\[Classification\:\s+Attempted\s+Denial\s+of\s+Service\]\s+\[Priority\:\s+2\]\s+\{UDP\}\s+.+?\:.+?\s+\-\>\s+.+?\:.+?\s*$)
+10 matches
+
+suricata[<number>]: [<number>:<number>:<number>] ETPRO <RuleName> <RuleDescription> [Classification: <Classification>] [Priority: <Priority>] {TCP} <SourceIP>:<SourcePort> -> <DestinationIP>:80
+(?^:suricata\[.+?\]\:\s+\[.+?\:.+?\:.+?\]\s+ETPRO\s+.+?\s+.+?\s+\[Classification\:\s+.+?\]\s+\[Priority\:\s+.+?\]\s+\{TCP\}\s+.+?\:.+?\s+\-\>\s+.+?\:80\s*$)
+32551 matches
+
+suricata[<number>]: [<number>:<number>:<number>] ETPRO <string> Huawei Remote Command Execution (CVE-2017-17215) [Classification: A Network Trojan was detected] [Priority: <number>] {<protocol>} <ipaddress>:<number> -> <ipaddress>:<number>
+(?^:suricata\[.+?\]\:\s+\[.+?\:.+?\:.+?\]\s+ETPRO\s+.+?\s+Huawei\s+Remote\s+Command\s+Execution\s+\(CVE\-2017\-17215\)\s+\[Classification\:\s+A\s+Network\s+Trojan\s+was\s+detected\]\s+\[Priority\:\s+.+?\]\s+\{.+?\}\s+.+?\:.+?\s+\-\>\s+.+?\:.+?\s*$)
+7 matches
+
+suricata[<number>]: [<number>:<number>:<number>] ETPRO <string> Suspicious Domain (flow <string>) in TLS SNI [Classification: <string> Detected] [Priority: <number>] {<protocol>} <ipaddress>:<number> -> <ipaddress>:<number>
+(?^:suricata\[.+?\]\:\s+\[.+?\:.+?\:.+?\]\s+ETPRO\s+.+?\s+Suspicious\s+Domain\s+\(flow\s+.+?\)\s+in\s+TLS\s+SNI\s+\[Classification\:\s+.+?\s+Detected\]\s+\[Priority\:\s+.+?\]\s+\{.+?\}\s+.+?\:.+?\s+\-\>\s+.+?\:.+?\s*$)
+26 matches
+
+suricata[<number>]: [<number>:<number>:<number>] ETPRO EXPLOIT Netcore Router Backdoor Usage [Classification: Attempted Administrator Privilege Gain] [Priority: <number>] {<protocol>} <ipaddress>:<number> -> <ipaddress>:<number>
+(?^:suricata\[.+?\]\:\s+\[.+?\:.+?\:.+?\]\s+ETPRO\s+EXPLOIT\s+Netcore\s+Router\s+Backdoor\s+Usage\s+\[Classification\:\s+Attempted\s+Administrator\s+Privilege\s+Gain\]\s+\[Priority\:\s+.+?\]\s+\{.+?\}\s+.+?\:.+?\s+\-\>\s+.+?\:.+?\s*$)
+106 matches
+
+suricata[<number>]: [<number>:<number>:<number>] ETPRO JA3 HASH Suspected Malware Related Response [Classification: Potentially Bad Traffic] [Priority: <number>] {<protocol>} <ipaddress>:<number> -> <ipaddress>:<number>
+(?^:suricata\[.+?\]\:\s+\[.+?\:.+?\:.+?\]\s+ETPRO\s+JA3\s+HASH\s+Suspected\s+Malware\s+Related\s+Response\s+\[Classification\:\s+Potentially\s+Bad\s+Traffic\]\s+\[Priority\:\s+.+?\]\s+\{.+?\}\s+.+?\:.+?\s+\-\>\s+.+?\:.+?\s*$)
+4 matches
+
+suricata[<number>]: [<number>:<number>:<number>] ETPRO MALWARE Observed Malicious SSL Cert (PredatorTheThief CnC) [Classification: Domain Observed Used for C2 Detected] [Priority: 1] {TCP} <ipaddress>:443 -> <ipaddress>:<number>
+(?^:suricata\[.+?\]\:\s+\[.+?\:.+?\:.+?\]\s+ETPRO\s+MALWARE\s+Observed\s+Malicious\s+SSL\s+Cert\s+\(PredatorTheThief\s+CnC\)\s+\[Classification\:\s+Domain\s+Observed\s+Used\s+for\s+C2\s+Detected\]\s+\[Priority\:\s+1\]\s+\{TCP\}\s+.+?\:443\s+\-\>\s+.+?\:.+?\s*$)
+5 matches
+
+suricata[<number>]: [<number>:<number>:<number>] GPL <Type> <access_type> <protocol> [Classification: Attempted Information Leak] [Priority: 2] {<protocol>} <sourceIP>:<sourcePort> -> <destinationIP>:<destinationPort>
+(?^:suricata\[.+?\]\:\s+\[.+?\:.+?\:.+?\]\s+GPL\s+.+?\s+.+?\s+.+?\s+\[Classification\:\s+Attempted\s+Information\s+Leak\]\s+\[Priority\:\s+2\]\s+\{.+?\}\s+.+?\:.+?\s+\-\>\s+.+?\:.+?\s*$)
+933968 matches
+
+suricata[<number>]: [<number>:<number>:<number>] GPL FTP MKD overflow [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} <ipaddress>:<number> -> <ipaddress>:21
+(?^:suricata\[.+?\]\:\s+\[.+?\:.+?\:.+?\]\s+GPL\s+FTP\s+MKD\s+overflow\s+\[Classification\:\s+Attempted\s+Administrator\s+Privilege\s+Gain\]\s+\[Priority\:\s+1\]\s+\{TCP\}\s+.+?\:.+?\s+\-\>\s+.+?\:21\s*$)
+12 matches
+
+suricata[<number>]: [<number>:<number>:<number>] GPL FTP SITE overflow attempt [Classification: Attempted Administrator Privilege Gain] [Priority: 1] {TCP} <ipaddress>:<number> -> <ipaddress>:21
+(?^:suricata\[.+?\]\:\s+\[.+?\:.+?\:.+?\]\s+GPL\s+FTP\s+SITE\s+overflow\s+attempt\s+\[Classification\:\s+Attempted\s+Administrator\s+Privilege\s+Gain\]\s+\[Priority\:\s+1\]\s+\{TCP\}\s+.+?\:.+?\s+\-\>\s+.+?\:21\s*$)
+17 matches
+
+suricata[<number>]: [<number>:<number>:<number>] GPL VOIP SIP INVITE message flooding [Classification: Attempted Denial of Service] [Priority: <number>] {<protocol>} <ipaddress>:<number> -> <ipaddress>:<number>
+(?^:suricata\[.+?\]\:\s+\[.+?\:.+?\:.+?\]\s+GPL\s+VOIP\s+SIP\s+INVITE\s+message\s+flooding\s+\[Classification\:\s+Attempted\s+Denial\s+of\s+Service\]\s+\[Priority\:\s+.+?\]\s+\{.+?\}\s+.+?\:.+?\s+\-\>\s+.+?\:.+?\s*$)
+12 matches
+
+UG - 15
+
+Total number of detected patterns: 18

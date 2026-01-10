@@ -1,0 +1,33 @@
+Unprocessed lines:
+
+2024-04-09T21:05:59+03:00 mysensor
+
+Total number of unprocessed lines: 1
+
+Detected patterns:
+
+suricata[1701965]: [1701965] <Notice> -- rule reload starting - 1, 1
+(?^:suricata\[1701965\]\:\s+\[1701965\]\s+.+?\s+\-\-\s+rule\s+reload\s+starting\s*$)
+10 matches
+
+suricata[1701965]: [1701965] <Warning> -- [ERRCODE: SC_ERR_EVENT_ENGINE(210)] - can't suppress sid <signature_id>, gid 1: unknown rule - 2, 2
+(?^:suricata\[1701965\]\:\s+\[1701965\]\s+.+?\s+\-\-\s+\[ERRCODE\:\s+SC_ERR_EVENT_ENGINE\(210\)\]\s+\-\s+can\'t\s+suppress\s+sid\s+.+?\,\s+gid\s+1\:\s+unknown\s+rule\s*$)
+90 matches
+
+suricata[<pid>]: [<pid>] <Notice> -- rule reload complete - 3, 3
+(?^:suricata\[.+?\]\:\s+\[.+?\]\s+.+?\s+\-\-\s+rule\s+reload\s+complete\s*$)
+9 matches
+
+suricata[<pid>]: [<signature_id>] <alert_text> [Classification: <classification>] [Priority: <priority>] {<protocol>} <source> -> <destination> - 4, 4
+(?^:suricata\[.+?\]\:\s+\[.+?\]\s+.+?\s+\[Classification\:\s+.+?\]\s+\[Priority\:\s+.+?\]\s+\{.+?\}\s+.+?\s+\-\>\s+.+?\s*$)
+999510 matches
+
+suricata[<pid>]: [<timestamp>] <Notice> -- Flow emergency mode entered... - 5, <timestamp> not correct because it is <pid>
+(?^:suricata\[.+?\]\:\s+\[.+?\]\s+.+?\s+\-\-\s+Flow\s+emergency\s+mode\s+entered\.\.\.\s*$)
+1 matches
+
+suricata[<pid>]: [<timestamp>] <Notice> -- Flow emergency mode over, back to normal... unsetting FLOW_EMERGENCY bit (ts.tv_sec: <seconds>, ts.tv_usec:<microseconds>) flow_spare_q status(): <percentage>% flows at the queue - 6, the same issue as above <timestamp>
+(?^:suricata\[.+?\]\:\s+\[.+?\]\s+.+?\s+\-\-\s+Flow\s+emergency\s+mode\s+over\,\s+back\s+to\s+normal\.\.\.\s+unsetting\s+FLOW_EMERGENCY\s+bit\s+\(ts\.tv_sec\:\s+.+?\,\s+ts\.tv_usec\:.+?\)\s+flow_spare_q\s+status\(\)\:\s+.+?\%\s+flows\s+at\s+the\s+queue\s*$)
+1 matches
+
+Total number of detected patterns: 6

@@ -1,0 +1,97 @@
+Unprocessed lines:
+
+May 31 15:51:55 192.168.3.10 su[10145]: (to testuser) robert on pts/0
+May 31 15:51:55 192.168.3.10 su[10145]: pam_unix(su-l:session): session opened for user testuser by robert(uid=0)
+May 31 16:42:50 192.168.0.219 su[10522]: (to backup) robert on pts/0
+May 31 16:42:50 192.168.0.219 su[10522]: pam_unix(su-l:session): session opened for user backup by robert(uid=0)
+Jun  3 14:34:59 192.168.3.10 su[30675]: (to testuser) alice on pts/0
+Jun  3 14:34:59 192.168.3.10 su[30675]: pam_unix(su-l:session): session opened for user testuser by alice(uid=0)
+Jun  3 16:08:12 192.168.3.10 su[625]: (to testuser) robert on pts/1
+Jun  3 16:08:12 192.168.3.10 su[625]: pam_unix(su-l:session): session opened for user testuser by robert(uid=0)
+Jun  3 16:08:30 192.168.3.10 su[645]: (to testuser) robert on pts/1
+Jun  3 16:08:30 192.168.3.10 su[645]: pam_unix(su-l:session): session opened for user testuser by robert(uid=0)
+Jun  3 16:13:49 192.168.3.10 su[809]: (to testuser) robert on pts/1
+Jun  3 16:13:49 192.168.3.10 su[809]: pam_unix(su-l:session): session opened for user testuser by robert(uid=0)
+Jun  4 13:34:51 192.168.3.10 su[26128]: (to testuser) alice on pts/0
+Jun  4 13:34:51 192.168.3.10 su[26128]: pam_unix(su-l:session): session opened for user testuser by alice(uid=0)
+Jun 14 10:16:18 192.168.3.10 su[12276]: (to testuser) robert on pts/0
+Jun 14 10:16:18 192.168.3.10 su[12276]: pam_unix(su-l:session): session opened for user testuser by robert(uid=0)
+Jun 14 10:16:39 192.168.3.10 su[12310]: (to testuser) robert on pts/0
+Jun 14 10:16:39 192.168.3.10 su[12310]: pam_unix(su-l:session): session opened for user testuser by robert(uid=0)
+Jun 16 14:32:12 192.168.3.10 su[8827]: (to testuser) alice on pts/0
+Jun 16 14:32:12 192.168.3.10 su[8827]: pam_unix(su-l:session): session opened for user testuser by alice(uid=0)
+Jun 16 15:17:34 192.168.3.10 su[9770]: (to testuser) robert on pts/1
+Jun 16 15:17:34 192.168.3.10 su[9770]: pam_unix(su-l:session): session opened for user testuser by robert(uid=0)
+Jun 17 11:19:40 192.168.3.10 su[1672]: (to testuser) alice on pts/0
+Jun 17 11:19:40 192.168.3.10 su[1672]: pam_unix(su-l:session): session opened for user testuser by alice(uid=0)
+Jun 17 11:48:51 192.168.3.10 su[2389]: (to testuser) robert on pts/1
+Jun 17 11:48:51 192.168.3.10 su[2389]: pam_unix(su-l:session): session opened for user testuser by robert(uid=0)
+Jun 17 13:03:34 192.168.3.10 su[3953]: (to testuser) robert on pts/2
+Jun 17 13:03:34 192.168.3.10 su[3953]: pam_unix(su-l:session): session opened for user testuser by robert(uid=0)
+Jun 17 13:57:59 192.168.3.10 su[6178]: (to testuser) robert on pts/2
+Jun 17 13:57:59 192.168.3.10 su[6178]: pam_unix(su-l:session): session opened for user testuser by robert(uid=0)
+Jun 17 15:53:00 192.168.3.10 su[14844]: (to testuser) robert on pts/0
+Jun 17 15:53:00 192.168.3.10 su[14844]: pam_unix(su-l:session): session opened for user testuser by robert(uid=0)
+Jun 18 09:24:06 192.168.3.10 su[3735]: (to testuser) robert on pts/0
+Jun 18 09:24:06 192.168.3.10 su[3735]: pam_unix(su-l:session): session opened for user testuser by robert(uid=0)
+Jun 21 11:33:45 192.168.0.111 su[18733]: pam_unix(su:auth): auth could not identify password for [mysql]
+Jun 21 11:33:45 192.168.0.111 su[18733]: pam_authenticate: Authentication failure
+Jun 21 11:33:45 192.168.0.111 su[18733]: FAILED su for mysql by alice
+Jun 21 11:33:45 192.168.0.111 su[18733]: - /dev/pts/0 alice:mysql
+Jun 21 11:33:53 192.168.0.111 su[18750]: pam_unix(su:auth): auth could not identify password for [mysql]
+Jun 21 11:33:53 192.168.0.111 su[18750]: pam_authenticate: Authentication failure
+Jun 21 11:33:53 192.168.0.111 su[18750]: FAILED su for mysql by alice
+Jun 21 11:33:53 192.168.0.111 su[18750]: - /dev/pts/0 alice:mysql
+Jun 21 11:44:06 192.168.3.10 su[1796]: (to testuser) alice on pts/0
+Jun 21 11:44:06 192.168.3.10 su[1796]: pam_unix(su-l:session): session opened for user testuser by alice(uid=0)
+Jun 22 10:54:32 192.168.3.10 su[32729]: (to testuser) robert on pts/1
+Jun 22 10:54:32 192.168.3.10 su[32729]: pam_unix(su-l:session): session opened for user testuser by robert(uid=0)
+Jun 22 13:27:17 192.168.3.10 su[7154]: (to testuser) robert on pts/2
+Jun 22 13:27:17 192.168.3.10 su[7154]: pam_unix(su-l:session): session opened for user testuser by robert(uid=0)
+Jun 22 21:36:19 192.168.1.174 su[24639]: + /dev/tty1 root:postgres
+
+Total number of unprocessed lines: 49
+
+Detected patterns:
+
+su[<number>]: (to root) <username> on pts/<number> UG (not only root)
+(?^:su\[.+?\]\:\s+\(to\s+root\)\s+.+?\s+on\s+pts\/.+?\s*$)
+59 matches
+
+su[<number>]: + /dev/pts/<number> <username>:<username> UG
+(?^:su\[.+?\]\:\s+\+\s+\/dev\/pts\/.+?\s+.+?\:.+?\s*$)
+90 matches
+
+su[<number>]: + ??? <username>:<username> UG
+(?^:su\[.+?\]\:\s+\+\s+\?\?\?\s+.+?\:.+?\s*$)
+420 matches
+
+su[<number>]: Successful su for <username> by <username> 2
+(?^:su\[.+?\]\:\s+Successful\s+su\s+for\s+.+?\s+by\s+.+?\s*$)
+511 matches
+
+su[<number>]: pam_systemd(su:session): Cannot create session: Already running in a session 3
+(?^:su\[.+?\]\:\s+pam_systemd\(su\:session\)\:\s+Cannot\s+create\s+session\:\s+Already\s+running\s+in\s+a\s+session\s*$)
+67 matches
+
+su[<number>]: pam_unix(su-l:session): session closed for user <username> 4
+(?^:su\[.+?\]\:\s+pam_unix\(su\-l\:session\)\:\s+session\s+closed\s+for\s+user\s+.+?\s*$)
+80 matches
+
+su[<number>]: pam_unix(su-l:session): session opened for user root by <username>(uid=0) UG root is not the only user. Also testUser
+(?^:su\[.+?\]\:\s+pam_unix\(su\-l\:session\)\:\s+session\s+opened\s+for\s+user\s+root\s+by\s+.+?\(uid\=0\)\s*$)
+59 matches
+
+su[<number>]: pam_unix(su:session): session closed for user <username> 5
+(?^:su\[.+?\]\:\s+pam_unix\(su\:session\)\:\s+session\s+closed\s+for\s+user\s+.+?\s*$)
+508 matches
+
+su[<number>]: pam_unix(su:session): session opened for user <username> by (uid=<number>) 6
+(?^:su\[.+?\]\:\s+pam_unix\(su\:session\)\:\s+session\s+opened\s+for\s+user\s+.+?\s+by\s+\(uid\=.+?\)\s*$)
+420 matches
+
+su[<number>]: pam_unix(su:session): session opened for user <username> by <username>(uid=<number>) 7
+(?^:su\[.+?\]\:\s+pam_unix\(su\:session\)\:\s+session\s+opened\s+for\s+user\s+.+?\s+by\s+.+?\(uid\=.+?\)\s*$)
+91 matches
+
+Total number of detected patterns: 10

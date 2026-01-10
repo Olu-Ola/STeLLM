@@ -1,0 +1,27 @@
+Unprocessed lines:
+
+2024-04-08T20:47:08+03:00 mysensor suricata[1701965]: [1702042] <Notice> -- Flow emergency mode entered...
+2024-04-08T20:47:18+03:00 mysensor suricata[1701965]: [1702042] <Notice> -- Flow emergency mode over, back to normal... unsetting FLOW_EMERGENCY bit (ts.tv_sec: 1712598435, ts.tv_usec:781169) flow_spare_q status(): 433% flows at the queue
+2024-04-09T21:05:59+03:00 mysensor
+
+Total number of unprocessed lines: 3
+
+Detected patterns:
+
+suricata[<pid>]: [<pid>] <Notice> -- rule reload complete - 1, 1
+(?^:suricata\[.+?\]\:\s+\[.+?\]\s+.+?\s+\-\-\s+rule\s+reload\s+complete\s*$)
+9 matches
+
+suricata[<pid>]: [<pid>] <Notice> -- rule reload starting - 2, 2
+(?^:suricata\[.+?\]\:\s+\[.+?\]\s+.+?\s+\-\-\s+rule\s+reload\s+starting\s*$)
+10 matches
+
+suricata[<pid>]: [<signature_id>:<alert_count>] <alert_text> [Classification: <classification>] [Priority: <priority>] {<protocol>} <source> -> <destination> - 3, <alert_count> does not equate to revision.
+(?^:suricata\[.+?\]\:\s+\[.+?\:.+?\]\s+.+?\s+\[Classification\:\s+.+?\]\s+\[Priority\:\s+.+?\]\s+\{.+?\}\s+.+?\s+\-\>\s+.+?\s*$)
+999510 matches
+
+suricata[<pid>]: [<signature_id>] <alert_text> -- [ERRCODE: <errcode>] - can't suppress sid <sid>, gid 1: unknown rule - 4, <signature_id> is wrong. It should be <pid>
+(?^:suricata\[.+?\]\:\s+\[.+?\]\s+.+?\s+\-\-\s+\[ERRCODE\:\s+.+?\]\s+\-\s+can\'t\s+suppress\s+sid\s+.+?\,\s+gid\s+1\:\s+unknown\s+rule\s*$)
+90 matches
+
+Total number of detected patterns: 4

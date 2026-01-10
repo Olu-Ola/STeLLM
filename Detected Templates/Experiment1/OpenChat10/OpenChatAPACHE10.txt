@@ -1,0 +1,33 @@
+Unprocessed lines:
+
+May 31 22:50:05 10.12.7.93 apache2: PHP Warning:  filesize(): stat failed for /var/www/html/photo.jpg in /var/www/html/test.php on line 50
+
+Total number of unprocessed lines: 1
+
+Detected patterns:
+
+apache2: PHP Notice:  Undefined index: <string> in <filepath> on line <number> 4
+(?^:apache2\:\s+PHP\s+Notice\:\s+Undefined\s+index\:\s+.+?\s+in\s+.+?\s+on\s+line\s+.+?\s*$)
+4 matches
+
+apache2: PHP Notice:  Undefined variable: <variable> in <filepath> on line <number> 3
+(?^:apache2\:\s+PHP\s+Notice\:\s+Undefined\s+variable\:\s+.+?\s+in\s+.+?\s+on\s+line\s+.+?\s*$)
+8247 matches
+
+apache2: PHP Notice: Constant <string> already defined in <filepath> on line <number> 1
+(?^:apache2\:\s+PHP\s+Notice\:\s+Constant\s+.+?\s+already\s+defined\s+in\s+.+?\s+on\s+line\s+.+?\s*$)
+4200 matches
+
+apache2: PHP Notice: Undefined offset: <number> in <filepath> on line <number> 2
+(?^:apache2\:\s+PHP\s+Notice\:\s+Undefined\s+offset\:\s+.+?\s+in\s+.+?\s+on\s+line\s+.+?\s*$)
+47341 matches
+
+apache2: PHP Warning:  Invalid argument supplied for foreach() in <string> on line <number> 5
+(?^:apache2\:\s+PHP\s+Warning\:\s+Invalid\s+argument\s+supplied\s+for\s+foreach\(\)\s+in\s+.+?\s+on\s+line\s+.+?\s*$)
+4110 matches
+
+apache2: PHP Warning:  ob_flush() expects exactly <number> parameters, <number> given in /var/www/html/survey.php on line <number> 6
+(?^:apache2\:\s+PHP\s+Warning\:\s+ob_flush\(\)\s+expects\s+exactly\s+.+?\s+parameters\,\s+.+?\s+given\s+in\s+\/var\/www\/html\/survey\.php\s+on\s+line\s+.+?\s*$)
+44 matches
+
+Total number of detected patterns: 6

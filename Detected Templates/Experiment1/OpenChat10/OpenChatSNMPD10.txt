@@ -1,0 +1,36 @@
+Unprocessed lines:
+
+
+Total number of unprocessed lines: 0
+
+Detected patterns:
+
+snmpd[<number>]: IFLA_STATS for <string> 1
+(?^:snmpd\[.+?\]\:\s+IFLA_STATS\s+for\s+.+?\s*$)
+20160 matches
+
+snmpd[<number>]: NET-SNMP version 5.8 - 2
+(?^:snmpd\[.+?\]\:\s+NET\-SNMP\s+version\s+5\.8\s*$)
+6 matches
+
+snmpd[<number>]: [<ProgramName>.<Level>]: Got SNMP request from ip <ipaddress> 6
+(?^:snmpd\[.+?\]\:\s+\[.+?\..+?\]\:\s+Got\s+SNMP\s+request\s+from\s+ip\s+.+?\s*$)
+57805 matches
+
+snmpd[<number>]: [snmpd.ERR]:     -- SNMPv2-SMI::mib-2.<number>.<number>.<number> - 7
+(?^:snmpd\[.+?\]\:\s+\[snmpd\.ERR\]\:\s+\-\-\s+SNMPv2\-SMI\:\:mib\-2\..+?\..+?\..+?\s*$)
+27204 matches
+
+snmpd[<number>]: [snmpd.ERR]: send response: Too long 3
+(?^:snmpd\[.+?\]\:\s+\[snmpd\.ERR\]\:\s+send\s+response\:\s+Too\s+long\s*$)
+823 matches
+
+snmpd[<number>]: error on subcontainer '<string>' insert (-1) 4
+(?^:snmpd\[.+?\]\:\s+error\s+on\s+subcontainer\s+\'.+?\'\s+insert\s+\(\-1\)\s*$)
+6 matches
+
+snmpd[<number>]: ioctl <number> returned -1 5
+(?^:snmpd\[.+?\]\:\s+ioctl\s+.+?\s+returned\s+\-1\s*$)
+2931 matches
+
+Total number of detected patterns: 7

@@ -1,0 +1,36 @@
+Unprocessed lines:
+
+
+Total number of unprocessed lines: 0
+
+Detected patterns:
+
+apache2: PHP Notice: Constant <constant> already defined in <script> on line <line> 1, 1
+(?^:apache2\:\s+PHP\s+Notice\:\s+Constant\s+.+?\s+already\s+defined\s+in\s+.+?\s+on\s+line\s+.+?\s*$)
+4200 matches
+
+apache2: PHP Notice: Undefined index: <index> in <script> on line <line> - 2, 2
+(?^:apache2\:\s+PHP\s+Notice\:\s+Undefined\s+index\:\s+.+?\s+in\s+.+?\s+on\s+line\s+.+?\s*$)
+4 matches
+
+apache2: PHP Notice: Undefined offset: <parameter> in <script> on line <line> - 3, 3
+(?^:apache2\:\s+PHP\s+Notice\:\s+Undefined\s+offset\:\s+.+?\s+in\s+.+?\s+on\s+line\s+.+?\s*$)
+47341 matches
+
+apache2: PHP Notice: Undefined variable: <variable> in <script> on line <line> - 4, 4
+(?^:apache2\:\s+PHP\s+Notice\:\s+Undefined\s+variable\:\s+.+?\s+in\s+.+?\s+on\s+line\s+.+?\s*$)
+8247 matches
+
+apache2: PHP Warning: Invalid argument supplied for <parameter> in <script> on line <line> - 5, 5
+(?^:apache2\:\s+PHP\s+Warning\:\s+Invalid\s+argument\s+supplied\s+for\s+.+?\s+in\s+.+?\s+on\s+line\s+.+?\s*$)
+4110 matches
+
+apache2: PHP Warning: filesize(): stat failed for <constant> in <script> on line <line> 6, <constant> gives a wrong meaning or impression.
+(?^:apache2\:\s+PHP\s+Warning\:\s+filesize\(\)\:\s+stat\s+failed\s+for\s+.+?\s+in\s+.+?\s+on\s+line\s+.+?\s*$)
+1 matches
+
+apache2: PHP Warning: ob_flush() expects exactly 0 parameters, 1 given in <script> on line <line> 7, 6
+(?^:apache2\:\s+PHP\s+Warning\:\s+ob_flush\(\)\s+expects\s+exactly\s+0\s+parameters\,\s+1\s+given\s+in\s+.+?\s+on\s+line\s+.+?\s*$)
+44 matches
+
+Total number of detected patterns: 7
