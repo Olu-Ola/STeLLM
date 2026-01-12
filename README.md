@@ -13,7 +13,7 @@ STeLLM's goal is to examine whether existing unsupervised, in-context learning b
 
 STeLLM, an unsupervised LLM-based named template detection system inspired by the design principles of LLM-TD.
 
-To execute the code, follow the procedure provided [here](https://github.com/ristov/llm-td/).
+To execute the code, follow the procedure provided [here](https://github.com/ristov/llm-td/). Our version of the modified script is available in the Scripts folder.
 
 However, depending on the experiment, selecting either the generic prompt or the targeted prompt correctly from the Prompts folder is crucial to obtaining the expected result. 
 
