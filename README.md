@@ -1,5 +1,5 @@
-# Beyond the Wildcards: An Empirical Study of Semantic Templates for Security Event Logs with Large Language Models
-## by Despoina Giarimpampa, Olumuyiwa O. Ojo, Iyiola E. Olatunji, Tegawendé F. Bissyandé, and Jacques Klein
+# Beyond the Wildcards: Exposing Semantic Blind Spots in Security Log Template Evaluation
+
 
 This repository contains additional details and information to support the reproducibility of the stated results.
 
